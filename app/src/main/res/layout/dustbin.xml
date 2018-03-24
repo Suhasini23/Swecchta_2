@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/ProfileText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:text="Dustbin Locator"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:text="Volunteer for a cleaner India,Help us out by Identifying more public dustbin."
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/black"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardVV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:cardCornerRadius="15dp"
+        >
+
+        <Button
+            android:id="@+id/identify"
+            style="@style/MyButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+
+            android:elevation="5dp"
+            android:text="Identify the Dustbin"
+            android:textAllCaps="true"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+            android:textColor="#f8c8d8"
+            android:textStyle="bold"
+
+            />
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardVV"
+        app:cardCornerRadius="15dp">
+
+        <Button
+            android:id="@+id/locate"
+            style="@style/MyButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+
+            android:text="Locate the dustbin"
+            android:textAllCaps="true"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+            android:textColor="#f8c8d8"
+            android:textStyle="bold" />
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
