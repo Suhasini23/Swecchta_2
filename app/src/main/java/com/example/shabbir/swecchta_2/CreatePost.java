@@ -174,6 +174,7 @@ public class CreatePost extends Fragment {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     int s =sharedPreferences.getInt("Post",0);
                     editor.putInt("Post",(s+1));
+                    editor.apply();
 
 
                 }
