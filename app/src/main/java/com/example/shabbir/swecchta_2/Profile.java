@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -92,6 +93,19 @@ public class Profile extends Fragment {
                 changeDetails();
             }
         });
+
+        FloatingActionButton share=(FloatingActionButton)view.findViewById(R.id.share);
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "I am happy to share my contribution, till now I have identified "+dustbin+" and resolve "+post+" dump problem.");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+            }
+        });
+
         return view;
     }
 
