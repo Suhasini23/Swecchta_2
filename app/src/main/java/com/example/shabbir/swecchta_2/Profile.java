@@ -34,8 +34,8 @@ public class Profile extends Fragment {
         name=shared.getString("name","John Doe");
         email=shared.getString("email","");
         pic=shared.getString("pic","android.resource://com.example.shabbir.swecchta_2/mipmap/man");
-        post=shared.getInt("Post",5)+"";
-        dustbin=shared.getInt("dustbin",10)+"";
+        post=shared.getInt("Post",0)+"";
+        dustbin=shared.getInt("dustbin",0)+"";
     }
 
     @Override

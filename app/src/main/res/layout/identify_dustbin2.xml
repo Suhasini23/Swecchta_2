@@ -71,7 +71,7 @@
         android:layout_marginTop="20dp"
         android:text="Lat and Long"
         android:textSize="15sp"
-        android:textColor="#ffffff"
+        android:textColor="#f4e647"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
@@ -84,7 +84,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:text="Address"
-        android:textColor="#ffffff"
+        android:textColor="#f4e647"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"

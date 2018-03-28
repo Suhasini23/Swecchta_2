@@ -122,6 +122,7 @@ public class IdentifyDustbin_2 extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 int s =sharedPreferences.getInt("dustbin",0);
                 editor.putInt("dustbin",(s+1));
+                editor.apply();
                 onBackPressed();
 
             }
