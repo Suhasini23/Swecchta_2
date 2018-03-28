@@ -127,17 +127,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/postNo"
                 style="@style/ProfileText"/>
 
-            <TextView
-                android:id="@+id/Shabbir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="27dp"
-                android:layout_marginStart="54dp"
-                android:text="Shabbir3"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/dustbinNo"
-                app:layout_constraintStart_toStartOf="parent" />
         </android.support.constraint.ConstraintLayout>
     </RelativeLayout>
 </ScrollView>

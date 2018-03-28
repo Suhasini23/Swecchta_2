@@ -51,7 +51,13 @@ import static android.app.Activity.RESULT_OK;
 public class CreatePost extends Fragment {
 
     //User variables
-    private String userID,postId,postImageUrl,author,Useraddress,descriptionText;
+    private String userID,
+            postId,
+            postImageUrl,
+            author,
+            Useraddress,
+            descriptionText,
+            currentLocationCoordinates;
 
     //Database Variables
     private DatabaseReference mDatabase;
@@ -165,12 +171,14 @@ public class CreatePost extends Fragment {
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                     postImageUrl =""+ taskSnapshot.getDownloadUrl();
-                    mDatabase = database.getReference("posts").child(postId);
+//                    mDatabase = database.getReference("posts").child(postId);
+                    mDatabase = database.getReference("users").child(userID).child("posts").child(postId);
+//                    Post post = new Post(postId,author,postImageUrl,descriptionText,userID,Useraddress);
+                    UserPost userPost = new UserPost(Useraddress,currentLocationCoordinates,descriptionText,"",postImageUrl,postId,author,userID,"","");
 
-                    Post post = new Post(postId,author,postImageUrl,descriptionText,userID,Useraddress);
+                    mDatabase.setValue(userPost);
 
-                    mDatabase.setValue(post);
-                    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+                    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(myContext);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     int s =sharedPreferences.getInt("Post",0);
                     editor.putInt("Post",(s+1));
@@ -213,6 +221,7 @@ public class CreatePost extends Fragment {
                     @Override
                     public void onSuccess(Location location) {
                         mLastLocation = location;
+                        currentLocationCoordinates = location.getLatitude()+","+location.getLongitude();
                         // Got last known location. In some rare situations this can be null.
                         if (location != null) {
                             // Logic to handle location object
